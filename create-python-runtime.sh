@@ -1,11 +1,12 @@
 #!/bin/bash
 if [[ $# -eq 0 ]] ; then
     echo 'Usage:'
-    echo 'create-python-runtime.sh release suffix'
+    echo 'create-python-runtime.sh [release] [suffix]'
+    echo 'See https://www.python.org/downloads/source/'   
+    echo 'Examples:'
     echo 'create-python-runtime.sh 3.7.2'
-    echo 'create-python-runtime.sh 3.8.0 a1'
     echo 'create-python-runtime.sh 3.7.2 rc1'
-    echo 'See https://www.python.org/downloads/source/'
+    echo 'create-python-runtime.sh 3.8.0 a1'    
     exit 0
 fi
 
