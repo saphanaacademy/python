@@ -1,10 +1,10 @@
 #!/bin/bash
 if [[ $# -eq 0 ]] ; then
     echo 'Usage:'
-    echo 'buildpython release suffix'
-    echo 'buildpython 3.7.2'
-    echo 'buildpython 3.8.0 a1'
-    echo 'buildpython 3.7.2 rc1'
+    echo 'create-python-runtime.sh release suffix'
+    echo 'create-python-runtime.sh 3.7.2'
+    echo 'create-python-runtime.sh 3.8.0 a1'
+    echo 'create-python-runtime.sh 3.7.2 rc1'
     echo 'See https://www.python.org/downloads/source/'
     exit 0
 fi
