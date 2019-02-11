@@ -3,11 +3,12 @@
 
 ### Tutorial Video ### 
 In the video tutorial, we show how you –using SAP HANA, express edition running in Google Cloud, as example — how to prepare the OS environment, how to build Python and create the runtime. A simple test script generates a sample app to validate all is well in the best possible worlds.
-[![Setup Python Run Time for XSA](https://img.youtube.com/vi/loi28PvDZVI/0.jpg)](https://www.youtube.com/watch?v=loi28PvDZVI " Setup Python Run Time for XSA")
+
+[![Setup Python Run Time for XSA](https://img.youtube.com/vi/loi28PvDZVI/0.jpg)](https://www.youtube.com/watch?v=loi28PvDZVI "Setup Python Run Time for XSA")
 
 ### Tutorial Video Playlist ### 
 The tutorials has been posted to the following playlist:
-[SAP HANA XS Advanced(XSA)](https://www.youtube.com/playlist?list=PLkzo92owKnVwL3AWaWVbFVrfErKkMY02a)
+*  [SAP HANA XS Advanced(XSA)](https://www.youtube.com/playlist?list=PLkzo92owKnVwL3AWaWVbFVrfErKkMY02a)
 
 ### SAP HANA, express edition on GCP ###
 We used the SAP HANA, express edition on Google Cloud Platform (server+applications) for this sample code. You can use the following commands to download the sample code to your system. 
