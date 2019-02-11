@@ -2,13 +2,13 @@
 # Setup Python Runtime for XSA #
 
 ### Tutorial Video ### 
-In the video tutorial, we show how you –using SAP HANA, express edition running in Google Cloud, as example — how to prepare the OS environment, how to build Python and create the runtime. A simple test script generates a sample app to validate all is well in the best possible worlds.
+[![Setup Python Run Time for XSA](https://img.youtube.com/vi/5Wm_0b73NJY/0.jpg)](https://www.youtube.com/watch?v=5Wm_0b73NJY "Setup Python Run Time for XSA")
 
-[![Setup Python Run Time for XSA](https://img.youtube.com/vi/loi28PvDZVI/0.jpg)](https://www.youtube.com/watch?v=loi28PvDZVI "Setup Python Run Time for XSA")
+In the video tutorial, we show how you –using SAP HANA, express edition running in Google Cloud, as example — how to prepare the OS environment, how to build Python and create the runtime. A simple test script generates a sample app to validate all is well in the best possible worlds.
 
 ### Tutorial Video Playlist ### 
 The tutorials has been posted to the following playlist:
-*  [SAP HANA XS Advanced(XSA)](https://www.youtube.com/playlist?list=PLkzo92owKnVwL3AWaWVbFVrfErKkMY02a)
+-  [SAP HANA XS Advanced(XSA)](https://www.youtube.com/playlist?list=PLkzo92owKnVwL3AWaWVbFVrfErKkMY02a)
 
 ### SAP HANA, express edition on GCP ###
 We used the SAP HANA, express edition on Google Cloud Platform (server+applications) for this sample code. You can use the following commands to download the sample code to your system. 
@@ -41,6 +41,18 @@ You can download the Python source code from https://www.python.org/downloads/so
 
 Note that the path here is a hardcoded HXE. If you are not using the express edition, change the path to the SID. 
 ```
+#!/bin/bash
+if [[ $# -eq 0 ]] ; then
+    echo 'Usage:'
+    echo 'create-python-runtime.sh [release] [suffix]'
+    echo 'See https://www.python.org/downloads/source/'
+    echo 'Examples:'
+    echo 'create-python-runtime.sh 3.7.2'
+    echo 'create-python-runtime.sh 3.7.2 rc1'
+    echo 'create-python-runtime.sh 3.8.0 a1'
+    exit 0
+fi
+
 # create work directories
 cd ~ ; mkdir -p builds source Downloads
 # download source to Downloads
@@ -62,6 +74,14 @@ xs runtimes
 ### Test Runtime ###
 The test script generates the required files for a simple Hello World python script. 
 ```
+#!/bin/bash
+if [[ $# -eq 0 ]] ; then
+    echo 'Usage:'
+    echo 'test-python-runtime.sh "release"'
+    echo 'e.g.: test-python-runtime.sh 3.8.0'
+    exit 0
+fi
+
 cd ~; mkdir -p pyapp; cd pyapp
 # create runtime.txt
 cat > runtime.txt <<EOF
